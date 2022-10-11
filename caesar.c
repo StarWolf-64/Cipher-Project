@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>//library for isdigit function
 #include "caesar.h"
-
 int convert_key(char *key){
 	int k=0;//integer value of key
 	//iterate through the key
