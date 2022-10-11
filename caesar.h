@@ -1,8 +1,7 @@
 typedef struct {
-	char *SString;//the actual c string
 	char *key;// this is the key that has to be transformed into a nonegative integer value
-	char *plain;//this is the plaintext
-	char *cipher;//this is the ciphertext
+	char *plain;//this is the plaintext (unencrypted C string)
+	char *cipher;//this is the ciphertext(encrypted C String)
 
 }caesar;
 char *caesar_encrypt(char*plain,char*key);//encrpyt a string 
