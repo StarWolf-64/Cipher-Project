@@ -24,16 +24,16 @@ char caesar_encrypt_char(char plain, char key){
 	 *account for key being bigger than 26 (I think)
 	 */
 		for(int i=0;i<strleng(plain)-1;i++){
-			if(isupper(plain[i])){
+			if(plain[i]=<97&&plain[i]>=122){
 				encryptedS=encryptedS+(char(int plain[i]+convert_key(key)-67)%26+67);//trying to typecase the plain value to int to add with key and do modulus
                                 //then type case the whole value back into a char
 
 			}
-			if(islower(plain[i])){
+			if(plain[i]=<65&&plain[i]>=90){
 				encryptedS=encryptedS+(char(int plain[i]+convert_key(key)-97)%26+97);
 
 			}
-			if(){//accounts for special characters you would start from exclamation mark which is at value 33 calucalation would be the same but with 33
+			if(plain[i]>=33&&plain[i]>=59){//accounts for special characters you would start from exclamation mark which is at value 33 calucalation would be the same but with 33
 			}
 			else{// certain characters like space just remain the same like ASCII value of 32 and 60-64
 				encryptedS=encryptedS+(char(int plain[i]);//just return the same character as is
@@ -41,6 +41,7 @@ char caesar_encrypt_char(char plain, char key){
 			
 			}
 		}
+		return encryptedS;
 
 	}
 
